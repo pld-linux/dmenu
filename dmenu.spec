@@ -1,8 +1,9 @@
 Summary:	dmenu is a generic menu for X
 Summary(hu.UTF-8):	dmenu egy általános menü X-hez
+Summary(pl.UTF-8):	ogólnego przeznaczenia menu dla X
 Name:		dmenu
 Version:	4.0
-Release:	0.1
+Release:	1
 License:	MIT/X
 Group:		Applications
 Source0:	http://code.suckless.org/dl/tools/%{name}-%{version}.tar.gz
@@ -19,6 +20,13 @@ items efficiently.
 dynamic menu egy általános menü X-hez, eredetileg a dwm-hez készítve.
 Valóban nagy mennyiségű (10.000 és több) felhasználó által definiált
 menüelemet képes hatékonyan kezelni.
+
+%description
+system menu ogólnego przeznaczenia dla serwrea X. dmenu został
+pierwotnie zaprojektowany dla dla zarządcy okien dwm, ale jest
+wykorzystywany również przez inne aplikacje. dmenu może efektywnie
+zarządzać ogromną ilością (10000 i więcej) zdefiniowanych przez
+użytkownika pozycji menu.
 
 %prep
 %setup -q
@@ -42,5 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/dmenu*
+%attr(755,root,root) %{_bindir}/dmenu
+%attr(755,root,root) %{_bindir}/dmenu_path
+%attr(755,root,root) %{_bindir}/dmenu_run
+%{_mandir}/man1/dmenu.1*
