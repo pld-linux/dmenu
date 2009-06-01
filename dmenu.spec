@@ -3,7 +3,7 @@ Summary(hu.UTF-8):	dmenu egy általános menü X-hez
 Summary(pl.UTF-8):	System menu dla X
 Name:		dmenu
 Version:	4.0
-Release:	1
+Release:	2
 License:	MIT/X
 Group:		Applications
 Source0:	http://code.suckless.org/dl/tools/%{name}-%{version}.tar.gz
@@ -33,12 +33,14 @@ użytkownika pozycji menu.
 
 %prep
 %setup -q
-sed -i "s@^PREFIX.*@PREFIX=%{_prefix}@" config.mk
-sed -i "s@^\(CFLAGS.*\)-Os\(.*\)@\1 \2 %{rpmcflags}@" config.mk
-sed -i "s@^\(LDFLAGS.*\)@\1 %{rpmldflags}@" config.mk
-
 
 %build
+cat << 'EOF' >> config.mk
+PREFIX=%{_prefix}
+CFLAGS:=%{rpmcflags} $(filter-out -Os,$(CFLAGS))
+LDFLAGS:=%{rpmldflags} $(LDFLAGS)
+EOF
+
 %{__make}
 
 %install
