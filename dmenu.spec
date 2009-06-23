@@ -8,6 +8,8 @@ License:	MIT/X
 Group:		Applications
 Source0:	http://code.suckless.org/dl/tools/%{name}-%{version}.tar.gz
 # Source0-md5:	66e761a653930cc8a21614ba9fedf903
+# http://prog.marmaro.de/dwm-meillo/dmenu-4.0-vertical_meillo.diff
+Patch0:		%{name}-vertical.patch
 URL:		http://tools.suckless.org/dmenu
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-proto-xineramaproto-devel
@@ -33,6 +35,8 @@ użytkownika pozycji menu.
 
 %prep
 %setup -q
+
+%patch -p1
 
 %build
 cat << 'EOF' >> config.mk
