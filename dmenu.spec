@@ -1,4 +1,4 @@
-Summary:	dmenu is a generic menu for X
+Summary:	dmenu - a generic menu for X
 Summary(hu.UTF-8):	dmenu egy általános menü X-hez
 Summary(pl.UTF-8):	System menu dla X
 Name:		dmenu
@@ -12,8 +12,7 @@ Source0:	http://code.suckless.org/dl/tools/%{name}-%{version}.tar.gz
 Patch0:		%{name}-vertical.patch
 URL:		http://tools.suckless.org/dmenu
 BuildRequires:	xorg-lib-libX11-devel
-BuildRequires:	xorg-proto-xineramaproto-devel
-BuildRequires:	xorg-proto-xproto-devel
+BuildRequires:	xorg-lib-libXinerama-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,10 +26,10 @@ Valóban nagy mennyiségű (10.000 és több) felhasználó által definiált
 menüelemet képes hatékonyan kezelni.
 
 %description
-System menu ogólnego przeznaczenia dla serwrea X. dmenu został
+System menu ogólnego przeznaczenia dla serwera X. dmenu został
 pierwotnie zaprojektowany dla dla zarządcy okien dwm, ale jest
 wykorzystywany również przez inne aplikacje. dmenu może efektywnie
-zarządzać ogromną ilością (10000 i więcej) zdefiniowanych przez
+zarządzać ogromną liczbą (10000 i więcej) zdefiniowanych przez
 użytkownika pozycji menu.
 
 %prep
