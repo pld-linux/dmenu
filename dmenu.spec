@@ -3,7 +3,7 @@ Summary(hu.UTF-8):	dmenu egy általános menü X-hez
 Summary(pl.UTF-8):	System menu dla X
 Name:		dmenu
 Version:	4.0
-Release:	2
+Release:	3
 License:	MIT/X
 Group:		Applications
 Source0:	http://code.suckless.org/dl/tools/%{name}-%{version}.tar.gz
@@ -25,7 +25,7 @@ Dynamic menu egy általános menü X-hez, eredetileg a dwm-hez készítve.
 Valóban nagy mennyiségű (10.000 és több) felhasználó által definiált
 menüelemet képes hatékonyan kezelni.
 
-%description
+%description -l pl.UTF-8
 System menu ogólnego przeznaczenia dla serwera X. dmenu został
 pierwotnie zaprojektowany dla dla zarządcy okien dwm, ale jest
 wykorzystywany również przez inne aplikacje. dmenu może efektywnie
@@ -34,8 +34,7 @@ użytkownika pozycji menu.
 
 %prep
 %setup -q
-
-%patch -p1
+%patch0 -p1
 
 %build
 cat << 'EOF' >> config.mk
