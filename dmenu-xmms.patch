@@ -1,5 +1,5 @@
 This patch is based on
-http://tools.suckless.org/dmenu/patches/dmenu_xmms.diff
+http://tools.suckless.org/dmenu/patches/xmms-like_pattern_matching
 
 diff -up dmenu-4.1.1/config.def.h dmenu-4.1.1_xmms/config.def.h
 --- dmenu-4.1.1/config.def.h	2009-04-18 13:50:04.000000000 +0200
