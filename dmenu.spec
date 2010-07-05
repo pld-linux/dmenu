@@ -3,11 +3,12 @@ Summary(hu.UTF-8):	dmenu egy általános menü X-hez
 Summary(pl.UTF-8):	System menu dla X
 Name:		dmenu
 Version:	4.1.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		Applications
 Source0:	http://dl.suckless.org/tools/%{name}-%{version}.tar.gz
 # Source0-md5:	931896a199741c23be945e8519a81c1d
+Patch0:		dmenu-xmms.patch
 URL:		http://tools.suckless.org/dmenu
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXinerama-devel
@@ -32,6 +33,8 @@ użytkownika pozycji menu.
 
 %prep
 %setup -q
+
+%patch0 -p1
 
 %build
 cat << 'EOF' >> config.mk
