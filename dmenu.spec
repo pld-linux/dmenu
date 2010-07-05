@@ -2,14 +2,12 @@ Summary:	dmenu - a generic menu for X
 Summary(hu.UTF-8):	dmenu egy általános menü X-hez
 Summary(pl.UTF-8):	System menu dla X
 Name:		dmenu
-Version:	4.0
-Release:	3
-License:	MIT/X
+Version:	4.1.1
+Release:	1
+License:	MIT
 Group:		Applications
-Source0:	http://code.suckless.org/dl/tools/%{name}-%{version}.tar.gz
-# Source0-md5:	66e761a653930cc8a21614ba9fedf903
-# http://prog.marmaro.de/dwm-meillo/dmenu-4.0-vertical_meillo.diff
-Patch0:		%{name}-vertical.patch
+Source0:	http://dl.suckless.org/tools/%{name}-%{version}.tar.gz
+# Source0-md5:	931896a199741c23be945e8519a81c1d
 URL:		http://tools.suckless.org/dmenu
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXinerama-devel
@@ -34,7 +32,6 @@ użytkownika pozycji menu.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 cat << 'EOF' >> config.mk
