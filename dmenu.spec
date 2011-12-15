@@ -2,12 +2,12 @@ Summary:	dmenu - a generic menu for X
 Summary(hu.UTF-8):	dmenu egy általános menü X-hez
 Summary(pl.UTF-8):	System menu dla X
 Name:		dmenu
-Version:	4.2.1
+Version:	4.4.1
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	http://dl.suckless.org/tools/%{name}-%{version}.tar.gz
-# Source0-md5:	5c95f974fa0c723f46838d0d5fbf5aca
+# Source0-md5:	d18aaa9ac3265f92ec34a0df0cb6ebd4
 Patch0:		dmenu-xmms.patch
 URL:		http://tools.suckless.org/dmenu
 BuildRequires:	xorg-lib-libX11-devel
@@ -58,6 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/dmenu
-%attr(755,root,root) %{_bindir}/dmenu_path
+%attr(755,root,root) %{_bindir}/lsx
 %attr(755,root,root) %{_bindir}/dmenu_run
 %{_mandir}/man1/dmenu.1*
+%{_mandir}/man1/lsx.1*
