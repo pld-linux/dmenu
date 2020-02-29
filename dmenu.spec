@@ -3,12 +3,14 @@ Summary(hu.UTF-8):	dmenu egy általános menü X-hez
 Summary(pl.UTF-8):	System menu dla X
 Name:		dmenu
 Version:	4.9
-Release:	1
+Release:	2
 License:	MIT
 Group:		Applications
 Source0:	http://dl.suckless.org/tools/%{name}-%{version}.tar.gz
 # Source0-md5:	9a537ec9a3a2ce9f08963d66b56cc030
-Patch0:		dmenu-xmms.patch
+Patch0:		fix-crash-when-XOpenIM-returns-NULL.patch
+Patch1:		improve-xopenim-error-message.patch
+Patch2:		revert-IME-support.patch
 URL:		http://tools.suckless.org/dmenu
 BuildRequires:	fontconfig-devel
 BuildRequires:	freetype-devel
@@ -36,8 +38,9 @@ użytkownika pozycji menu.
 
 %prep
 %setup -q
-
-# %patch0 -p1
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 cat << 'EOF' >> config.mk
