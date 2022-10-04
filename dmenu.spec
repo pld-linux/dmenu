@@ -2,12 +2,12 @@ Summary:	dmenu - a generic menu for X
 Summary(hu.UTF-8):	dmenu egy általános menü X-hez
 Summary(pl.UTF-8):	System menu dla X
 Name:		dmenu
-Version:	5.1
+Version:	5.2
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	http://dl.suckless.org/tools/%{name}-%{version}.tar.gz
-# Source0-md5:	a18dcdaf3bd60e357fa5bb065059f9f6
+# Source0-md5:	fe156c095360914b9b7badf118a66c10
 URL:		http://tools.suckless.org/dmenu
 BuildRequires:	fontconfig-devel
 BuildRequires:	freetype-devel
